@@ -1,0 +1,2 @@
+# lemonlemonadedictionary
+курсовая словарь
