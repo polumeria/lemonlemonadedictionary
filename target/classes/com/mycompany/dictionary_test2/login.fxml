@@ -18,7 +18,7 @@
                <Image url="@../../../images/login_background.jpg" />
             </image>
          </ImageView>
-            <TextField fx:id="username" layoutX="169.0" layoutY="143.0" prefHeight="33.0" prefWidth="412.0" promptText="Username">
+            <TextField fx:id="username" layoutX="169.0" layoutY="143.0" onAction="#logIn" prefHeight="33.0" prefWidth="412.0" promptText="Username">
             <font>
                <Font size="18.0" />
             </font></TextField>
@@ -26,7 +26,7 @@
             <font>
                <Font size="18.0" />
             </font></PasswordField>
-            <Button fx:id="loginButton" layoutX="169.0" layoutY="323.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="179.0" styleClass="loginButtonStyle" text="Войти" textFill="WHITE" />
+            <Button fx:id="loginButton" layoutX="169.0" layoutY="323.0" mnemonicParsing="false" onAction="#logIn" prefHeight="33.0" prefWidth="179.0" styleClass="loginButtonStyle" text="Войти" textFill="WHITE" />
          <Button fx:id="backButton" layoutX="402.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchBack" prefHeight="33.0" prefWidth="179.0" styleClass="loginButtonStyle" text="Назад" textFill="WHITE" />
            <padding>
               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

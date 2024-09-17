@@ -21,7 +21,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 
-public class HomeController implements Initializable {
+public class LoggedHomeController implements Initializable {
+
     @FXML
     private TextField search;
 
@@ -35,17 +36,35 @@ public class HomeController implements Initializable {
     private TableColumn<SearchModel, String> descriptionColumn;
 
     ObservableList<SearchModel> SearchModelObservableList = FXCollections.observableArrayList();
-    
-    private void setItems(ObservableList<SearchModel> items, TableView<SearchModel> tableView) {
-        tableView.setItems(items);
+
+    @FXML
+    private void switchToEdit() throws IOException {
+        App.setRoot("edit");
     }
-    
+
+    @FXML
+    private void switchToAdd() throws IOException {
+        App.setRoot("add");
+    }
+
+    @FXML
+    private void switchToDelete() throws IOException {
+        App.setRoot("delete");
+    }
+
+    @FXML
+    private void switchToUnlogged() throws IOException {
+        App.setRoot("home");
+        App.showAlert("Success", "Выход из учетной записи произведен успешно");
+
+    }
+
     private void initHandler(Scene scene) {
         if (scene != null) {
             scene.setOnKeyPressed(event -> {
                 try {
                     if (event.getCode() == KeyCode.ENTER) {
-                        System.out.println("Enter has been pressed.");
+                        System.out.println(" Enter has been pressed.");
                         search(); // Call the search method
                     }
                 } catch (Exception e) {
@@ -57,15 +76,9 @@ public class HomeController implements Initializable {
             System.err.println("Scene is null. Cannot set key handler.");
         }
     }
-
-    @FXML
-    private void switchToLogin() throws IOException {
-        App.setRoot("login");
-    }
-
-    @FXML
-    private void switchToSingup() throws IOException {
-        App.setRoot("singup");
+    
+    private void setItems(ObservableList<SearchModel> items, TableView<SearchModel> tableView) {
+        tableView.setItems(items);
     }
 
     @FXML
@@ -102,21 +115,19 @@ public class HomeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resource) {
-        
         Scene scene = search.getScene();
         initHandler(scene);
         search.requestFocus(); // Ensure focus is set
-
         
         terminColumn.setCellValueFactory(new PropertyValueFactory<>("termin"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
 
         String viewQuery = "select termin, description from termin where is_deleted = false";
-
+                
         try (var connection =  Database.connect();
-             Statement view =  connection.createStatement();
-             ResultSet output = view.executeQuery(viewQuery)) {
-
+            Statement view =  connection.createStatement();
+            ResultSet output = view.executeQuery(viewQuery)) {
+            
             while (output.next()) {
                 String termin = output.getString("termin");
                 String description = output.getString("description");
@@ -133,8 +144,8 @@ public class HomeController implements Initializable {
             System.out.println("No data found in the database.");
         } else {
             System.out.println("Data successfully loaded into TableView.");
-        }
-
+        }    
+        
         search.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 try {
@@ -144,6 +155,5 @@ public class HomeController implements Initializable {
                 }
             }
         });
-
     }
 }

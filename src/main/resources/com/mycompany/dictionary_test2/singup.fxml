@@ -26,11 +26,11 @@
             <font>
                <Font size="18.0" />
             </font></TextField>
-            <PasswordField fx:id="password" layoutX="169.0" layoutY="188.0" prefHeight="33.0" prefWidth="412.0" promptText="Password">
+            <PasswordField fx:id="password0" layoutX="169.0" layoutY="188.0" prefHeight="33.0" prefWidth="412.0" promptText="Password">
             <font>
                <Font size="18.0" />
             </font></PasswordField>
-            <Button fx:id="singupButton" layoutX="169.0" layoutY="367.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="179.0" styleClass="singupButtonStyle" text="Зарегестрироваться" textFill="WHITE" />
+            <Button fx:id="singupButton" layoutX="169.0" layoutY="367.0" mnemonicParsing="false" onAction="#singUp" prefHeight="33.0" prefWidth="179.0" styleClass="singupButtonStyle" text="Зарегестрироваться" textFill="WHITE" />
          <Button fx:id="backButton" layoutX="402.0" layoutY="367.0" mnemonicParsing="false" onAction="#switchBack" prefHeight="33.0" prefWidth="179.0" styleClass="singupButtonStyle" text="Назад" textFill="WHITE" />
          <PasswordField fx:id="password1" layoutX="169.0" layoutY="275.0" prefHeight="33.0" prefWidth="412.0" promptText="Confirm password">
             <font>

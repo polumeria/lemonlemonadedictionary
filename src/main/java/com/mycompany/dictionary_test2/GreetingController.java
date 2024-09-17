@@ -13,7 +13,7 @@ public class GreetingController {
     private void switchToHome() throws IOException {
         System.out.println("Connect button clicked");
         try (var connection =  Database.connect()){
-                App.setRoot("home");
+                App.setRoot("logged_home");
             } catch (SQLException e) {
                 App.showAlert("Error", e.getMessage());
             }

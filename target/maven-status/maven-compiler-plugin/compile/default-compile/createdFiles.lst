@@ -1,10 +1,8 @@
-com/mycompany/dictionary_test2/LogInController.class
-com/mycompany/dictionary_test2/App.class
-com/mycompany/dictionary_test2/HomeController.class
-com/mycompany/dictionary_test2/SingUpController.class
-com/mycompany/dictionary_test2/SearchModel.class
+com/mycompany/dictionary_test2/AddController.class
 module-info.class
-com/mycompany/dictionary_test2/GreetingController.class
-com/mycompany/dictionary_test2/database/DatabaseQuery.class
+com/mycompany/dictionary_test2/LoggedHomeController.class
+com/mycompany/dictionary_test2/HomeController.class
+com/mycompany/dictionary_test2/SearchModel.class
+com/mycompany/dictionary_test2/FinderModel.class
 com/mycompany/dictionary_test2/database/DatabaseConfig.class
-com/mycompany/dictionary_test2/database/Database.class
+com/mycompany/dictionary_test2/DeleteController.class

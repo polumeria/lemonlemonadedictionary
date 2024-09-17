@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" styleClass="homeBackStyle" stylesheets="@home_style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dictionary_test2.LoggedHomeController">
+    <children>
+      <Label layoutX="21.0" layoutY="19.0" text="Поиск">
+         <font>
+            <Font size="26.0" />
+         </font></Label>
+      <TextField fx:id="search" layoutX="126.0" layoutY="19.0" onKeyPressed="#search" prefHeight="31.0" prefWidth="480.0" promptText="термин, который вы хотите найти" />
+      
+      <TableView fx:id="tableView" layoutX="25.0" layoutY="75.0" prefHeight="400.0" prefWidth="700.0" style="-fx-wrap-text: true">
+        <columns>
+          <TableColumn fx:id="terminColumn" prefWidth="${tableView.width / 3}" styleClass="tableColumnStyle" text="Термин" />
+          <TableColumn fx:id="descriptionColumn" styleClass="tableColumnStyle" text="Определение" />
+        </columns>
+      </TableView>
+      <MenuBar layoutX="639.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="82.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Редактировать">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#switchToAdd" text="Добавить термин" />
+              <MenuItem mnemonicParsing="false" onAction="#switchToDelete" text="Удалить термин" />
+              <MenuItem mnemonicParsing="false" onAction="#switchToEdit" text="Изменить термин" />
+              <MenuItem mnemonicParsing="false" onAction="#switchToUnlogged" text="Выйти из учетной записи" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+   
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</Pane>

@@ -11,7 +11,7 @@ public class SearchModel {
     public SearchModel(String termin, String description) {
         this.termin = termin;
         this.description = description;
-    }
+    }    
 
     public String getTermin() {
         return termin;
