@@ -1,0 +1,75 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" styleClass="homeBackStyle" stylesheets="@home_style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dictionary_test2.HomeController">
+    <children>
+      <Label layoutX="23.0" layoutY="28.0" text="Поиск">
+         <font>
+            <Font size="26.0" />
+         </font></Label>
+      <TextField fx:id="search" layoutX="126.0" layoutY="30.0" prefHeight="31.0" prefWidth="480.0" promptText="термин, который вы хотите найти" />
+      <MenuBar layoutX="633.0" layoutY="30.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="82.0">
+        <menus>
+          <Menu mnemonicParsing="false" onAction="#switchToLogin" text="Войти">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#switchToLogin" text="Войти" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToSingup" text="Зарегестрироваться" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="373.0" layoutX="35.0" layoutY="95.0" stroke="WHITE" strokeType="INSIDE" width="680.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ead8ff" height="28.0" layoutX="37.0" layoutY="95.0" stroke="#ead8ff" strokeType="INSIDE" width="676.0" />
+      
+      
+      <GridPane fx:id="terminDisplay" gridLinesVisible="true" layoutX="36.0" layoutY="94.0" prefHeight="373.0" prefWidth="678.0">
+        <columnConstraints>
+          <ColumnConstraints fx:id="homeColumn1" hgrow="SOMETIMES" minWidth="10.0" percentWidth="35" prefWidth="100.0" />
+          <ColumnConstraints fx:id="homeColumn2" hgrow="SOMETIMES" minWidth="10.0" percentWidth="65" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints minHeight="35.0" prefHeight="70.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="20.0" prefHeight="35.0" vgrow="NEVER" />
+          <RowConstraints minHeight="20.0" prefHeight="35.0" vgrow="NEVER" />
+          <RowConstraints minHeight="20.0" prefHeight="35.0" vgrow="NEVER" />
+          <RowConstraints minHeight="20.0" prefHeight="35.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="column1Name" alignment="CENTER" layoutX="21.0" layoutY="19.0" text="Термин" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+            <font>
+               <Font size="18.0" />
+            </font></Label>
+            <Label fx:id="column2Name" alignment="CENTER" layoutX="21.0" layoutY="19.0" text="Определение" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+            <font>
+               <Font size="18.0" />
+            </font></Label>
+            <TextArea prefHeight="200.0" prefWidth="200.0" 
+                      text="API (Application Programming Interface)" GridPane.rowIndex="1" />
+            <TextArea prefHeight="200.0" prefWidth="200.0" 
+                      text="Набор готовых функций, классов, протоколов и инструментов, предоставляемых программным интерфейсом для взаимодействия с другими приложениями или сервисами." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      вот эти строки нужно генерировать в контроллере на каждый термин
+
+
+   </children>
+   
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</Pane>-->

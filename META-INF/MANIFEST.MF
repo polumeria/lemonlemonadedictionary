@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: App.java
+Class-Path: dictionary_test2/src/main/java/com/mycompany/dictionary_test
+ 2
+

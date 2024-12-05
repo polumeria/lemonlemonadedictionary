@@ -1,0 +1,9 @@
+.homeBackStyle {
+        -fx-background-color: #FFF0E7
+}
+
+.tableColumnStyle {
+        -fx-text-overflow: wrap;
+        -fx-alignment: top-left;
+        -fx-padding: 4px;
+}
